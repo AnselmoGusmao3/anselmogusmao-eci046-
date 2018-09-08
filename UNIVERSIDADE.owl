@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/gapco/ontologies/2018/7/UNIVERSIDADE#"
+     xml:base="http://www.semanticweb.org/gapco/ontologies/2018/7/UNIVERSIDADE"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:UNIVERSIDADE="http://www.semanticweb.org/gapco/ontologies/2018/7/UNIVERSIDADE#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/gapco/ontologies/2018/7/UNIVERSIDADE">
+        <Creator>Anselmo Rezende Gusmão</Creator>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/gapco/ontologies/2018/7/UNIVERSIDADE#Creator -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/gapco/ontologies/2018/7/UNIVERSIDADE#Creator"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/gapco/ontologies/2018/7/UNIVERSIDADE#Ensina -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gapco/ontologies/2018/7/UNIVERSIDADE#Ensina"/>
+    
+
+
+    <!-- http://www.semanticweb.org/gapco/ontologies/2018/7/UNIVERSIDADE#Estuda -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gapco/ontologies/2018/7/UNIVERSIDADE#Estuda">
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gapco/ontologies/2018/7/UNIVERSIDADE#Estuda"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/gapco/ontologies/2018/7/UNIVERSIDADE#Disciplina"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/gapco/ontologies/2018/7/UNIVERSIDADE#Disciplina -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gapco/ontologies/2018/7/UNIVERSIDADE#Disciplina"/>
+    
+
+
+    <!-- http://www.semanticweb.org/gapco/ontologies/2018/7/UNIVERSIDADE#Estudante -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gapco/ontologies/2018/7/UNIVERSIDADE#Estudante"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/gapco/ontologies/2018/7/UNIVERSIDADE#Disciplina -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gapco/ontologies/2018/7/UNIVERSIDADE#Disciplina"/>
+    
+
+
+    <!-- http://www.semanticweb.org/gapco/ontologies/2018/7/UNIVERSIDADE#Estudante -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gapco/ontologies/2018/7/UNIVERSIDADE#Estudante">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gapco/ontologies/2018/7/UNIVERSIDADE#Pessoa"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gapco/ontologies/2018/7/UNIVERSIDADE#Estuda"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/gapco/ontologies/2018/7/UNIVERSIDADE#Disciplina"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gapco/ontologies/2018/7/UNIVERSIDADE#Gestão -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gapco/ontologies/2018/7/UNIVERSIDADE#Gestão">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gapco/ontologies/2018/7/UNIVERSIDADE#Disciplina"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gapco/ontologies/2018/7/UNIVERSIDADE#Ontologia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gapco/ontologies/2018/7/UNIVERSIDADE#Ontologia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gapco/ontologies/2018/7/UNIVERSIDADE#Disciplina"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gapco/ontologies/2018/7/UNIVERSIDADE#Pessoa -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gapco/ontologies/2018/7/UNIVERSIDADE#Pessoa"/>
+    
+
+
+    <!-- http://www.semanticweb.org/gapco/ontologies/2018/7/UNIVERSIDADE#Professor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gapco/ontologies/2018/7/UNIVERSIDADE#Professor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gapco/ontologies/2018/7/UNIVERSIDADE#Pessoa"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gapco/ontologies/2018/7/UNIVERSIDADE#Ensina"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/gapco/ontologies/2018/7/UNIVERSIDADE#Disciplina"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
